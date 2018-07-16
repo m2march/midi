@@ -172,4 +172,4 @@ def midi_to_onsets(midi_file_name, sample_rate):
 
 
 if __name__ == "__main__":
-    print midi_to_onsets("dorrance-transcript.mid", 44100)
+    print(midi_to_onsets("dorrance-transcript.mid", 44100))
