@@ -27,6 +27,12 @@ class Note():
     def __cmp__(self, other):
         return self.tick - other.tick or self.duration - other.duration
 
+    def __lt__(self, other):
+        return self.__cmp__(other) < 0
+
+    def __eq__(self, other):
+        return self.__cmp__(other) == 0
+
     @property
     def duration_ms(self):
         return self.duration * (60000.0 / self.bpm / self.resolution)
@@ -172,4 +178,4 @@ def midi_to_onsets(midi_file_name, sample_rate):
 
 
 if __name__ == "__main__":
-    print midi_to_onsets("dorrance-transcript.mid", 44100)
+    print(midi_to_onsets("dorrance-transcript.mid", 44100))
