@@ -9,7 +9,7 @@ setup(name='midi',
       author_email='m2.march@gmail.com',
       packages=['m2.midi'],
       namespace_packages=['m2'],
-      install_requires=[
-          'python-midi'
-      ]
+      #install_requires=[
+      #    'python3-midi'
+      #]
       )
